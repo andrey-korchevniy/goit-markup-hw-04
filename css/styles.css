@@ -71,7 +71,7 @@ ul {
   background-color: var(--bgc-color);
 }
 
-/* ------------------ LOGO------------------------------ */
+/* ------------------ LOGO and MENU------------------------------ */
 .page-header-nav {
   display: flex;
   align-items: center;
@@ -103,25 +103,23 @@ ul {
 
 .nav-link,
 .nav-contact {
-  display: block;
+  display: inline-flex;
   padding-top: 32px;
   padding-bottom: 32px;
 
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  text-decoration: none;
+  text-decoration: none;  
+  color: var(--primary-text-color);
 }
 
 .nav-link {
   color: var(--secondary-text-color);
 }
 
-.nav-contact {
-  color: var(--primary-text-color);
-}
-
-.nav-cantact-item:not(:last-child) {
+.nav-contact-item:not(:last-child) {
+  display: inline-block;
   margin-right: 50px;
 }
 
@@ -134,9 +132,38 @@ ul {
   color: var(--accent-color);
 }
 
+.nav-mail {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+}
+
+.nav-tel {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+}
+
+.nav-contact-mail, 
+.nav-contact-tel {
+  display: flex;
+  align-items: center;
+}
+
 /* ------------------ HERO SECTION ------------------------------ */
 .hero {
   background-color: var(--hero-bgc);
+  background-image: linear-gradient(
+    to right,
+    rgba(47, 48, 58, 0.4),
+    rgba(47, 48, 58, 0.4)
+  ), 
+  url('../images/hero-image.jpg');
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
