@@ -106,11 +106,12 @@ ul {
   display: inline-flex;
   padding-top: 32px;
   padding-bottom: 32px;
+  align-items: center;
 
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  text-decoration: none;  
+  text-decoration: none;
   color: var(--primary-text-color);
 }
 
@@ -136,29 +137,25 @@ ul {
   width: 16px;
   height: 12px;
   margin-right: 10px;
+  --color: currentColor;
 }
 
 .nav-tel {
   width: 10px;
   height: 16px;
   margin-right: 10px;
-}
-
-.nav-contact-mail, 
-.nav-contact-tel {
-  display: flex;
-  align-items: center;
+  --color: currentColor;
 }
 
 /* ------------------ HERO SECTION ------------------------------ */
 .hero {
   background-color: var(--hero-bgc);
   background-image: linear-gradient(
-    to right,
-    rgba(47, 48, 58, 0.4),
-    rgba(47, 48, 58, 0.4)
-  ), 
-  url('../images/hero-image.jpg');
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/hero-image.jpg");
 
   background-repeat: no-repeat;
   background-size: cover;
@@ -201,7 +198,8 @@ ul {
 /* Названия секций */
 .features-title,
 .about-title,
-.team-title {
+.team-title,
+.clients-title {
   color: var(--secondary-text-color);
   font-weight: 700;
   font-size: 36px;
@@ -235,7 +233,21 @@ ul {
   line-height: 1.71;
 }
 
-/* ------------------- ABOUT SECTION ---------------*/
+.features-pic-place {
+  width: 100%;
+  height: 120px;
+  background-color: var(--bgc-ourteam);
+  margin-bottom: 30px;
+  padding: 25px 100px;
+  border-radius: 4px;
+}
+
+.features-pic {
+  width: 70px;
+  height: 70px;
+}
+
+/* ------------------- ABOUT SECTION ---------------------------------*/
 .about {
   padding-top: 0;
 }
@@ -260,6 +272,7 @@ ul {
 .team {
   background-color: var(--bgc-ourteam);
   padding-top: 94px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .team-title {
@@ -279,11 +292,17 @@ ul {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+  margin-bottom: 16px;
 }
 
 .team-card {
-  width: 270px;
+  width: calc((100% - 90px) / 3);
   background-color: var(--bgc-color);
+  background: #ffffff;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-card:not(:last-child) {
@@ -299,16 +318,94 @@ ul {
 }
 
 .team-item {
+  display: block;
   padding-top: 30px;
   padding-bottom: 30px;
+  justify-content: center;
+  align-items: center;
+  padding-right: 32px;
+  padding-left: 32px;
+}
+
+.team-sm,
+.footer-sm-place {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.team-sm-icon,
+.footer-sm-icon {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+}
+
+.team-sm-icon:focus,
+.team-sm-icon:hover {
+  background-color: var(--accent-color);
+  --color: #ffffff;
+}
+
+.team-sm-icon > svg,
+.footer-sm-icon > svg {
+  width: 20px;
+  height: 20px;
+  justify-items: center;
+}
+
+/* ---------------- CLIENTS --------------------------- */
+
+.clients-list {
+  display: flex;
+  /* outline: 1px solid darkorchid; */
+  margin-right: -30px;
+  margin-top: 50px;
+}
+
+.clients-list li {
+  display: flex;
+  width: calc((100%-150px) / 6);
+  height: 92px;
+  margin-right: 30px;
+}
+
+.client-link:hover,
+.client-link:focus {
+  border: 1px solid var(--accent-color);
+  --color: var(--accent-color);
+}
+
+.client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.client-logo {
+  /* --color: currentColor; */
+  width: 106px;
+  height: 60px;
 }
 
 /* ---------------- FOOTER --------------------------- */
 
 .footer {
-  background-color: var(--bgc-footer);  
+  background-color: var(--bgc-footer);
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.footer > .container {
+  display: flex;
 }
 
 .logo-footer {
@@ -335,6 +432,34 @@ ul {
 
 .footer-contacts.mail {
   margin-bottom: 9px;
+}
+
+.footer-sm {
+  margin-left: 70px;
+}
+
+.footer-call {
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.footer-sm-icon {
+  background: rgba(255, 255, 255, 0.1);
+  --color: #ffffff;
+}
+
+.footer-sm-place li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-sm-icon:hover,
+.footer-sm-icon:focus {
+  background-color: var(--accent-color);
 }
 
 /* ---------------- PORTFOLIO SECTION -------------------- */
@@ -369,6 +494,8 @@ ul {
 .portfolio-button:hover {
   color: #ffffff;
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-photo {
@@ -408,7 +535,7 @@ ul {
   margin-right: 0;
 }
 
-.portfolio-list-item:nth-last-child(-n+3) {
+.portfolio-list-item:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
 
@@ -421,3 +548,8 @@ ul {
   padding-bottom: 20px;
 }
 
+.portfolio-list-item:focus,
+.portfolio-list-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
