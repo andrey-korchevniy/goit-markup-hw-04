@@ -17,40 +17,36 @@
 <body>
 
 <!-- Шапка сайта -->
-<header class="page-header">
-  <div class="container">
-    <nav class="page-header-nav">
-      <a href="./index.html" class="nav-logo"><span class="logo-web">Web</span>Studio</a>
-      <ul class="list nav-list">
-        <li class="nav-item"><a href="./index.html" class="nav-link">Студия</a></li>
-        <li class="nav-item"><a href="./portfolio.html" class="nav-link">Портфолио</a></li>
-        <li class="nav-item"><a href="/" class="nav-link">Контакты</a></li>
+  <header class="page-header">
+    <div class="container">
+      <nav class="page-header-nav">
+        <a class="logo" href="./index.html"><span class="logo-web">Web</span>Studio</a>
+        <ul class="list nav-list">
+          <li class="nav-item"><a class="nav-link" href="./index.html">Студия</a></li>
+          <li class="nav-item"><a class="active nav-link " href="./portfolio.html">Портфолио</a></li>
+          <li class="nav-item"><a class="nav-link" href="/">Контакты</a></li>
+        </ul>
+      </nav>
+      <ul class="nav-contacts list">
+        <li class="nav-contact-item">
+          <a class="nav-contact" href="mailto:info@devstudio.com">
+            <svg class="nav-svg" width="16" height="12">
+              <use href="./images/icons.svg#icon-envlope"></use>
+            </svg>
+            info@devstudio.com
+          </a>
+        </li>
+        <li class="nav-contact-item">
+          <a class="nav-contact" href="tel:+380961111111">
+            <svg class="nav-svg" width="10" height="16">
+              <use href="./images/icons.svg#icon-smartphone"></use>
+            </svg>
+            +38 096 111 11 11
+          </a>
+        </li>
       </ul>
-    </nav>
-    
-    <ul class="nav-contacts list">
-
-      <li class="nav-contact-item">
-        <a class="nav-contact" href="mailto:info@devstudio.com">
-          <svg class="nav-mail">
-            <use href="./images/icons.svg#icon-envlope"></use>
-          </svg>              
-          info@devstudio.com
-        </a>
-      </li>
-      
-      <li class="nav-contact-item">
-        <a class="nav-contact" href="tel:+380961111111"> 
-          <svg class="nav-tel">
-            <use href="./images/icons.svg#icon-smartphone"></use>
-          </svg>
-          +38 096 111 11 11
-        </a>
-      </li>
-
-    </ul>
-  </div>
-</header>
+    </div>
+  </header>
 
   <main>
   <section class="portfolio section" >
@@ -167,61 +163,69 @@
   </main>
     
 <!-- Футер сайта -->
-<footer class="footer">
-  <div class="container">
-
-    <div class="contacts">
-      <p class="footer-logo"><a class="link" href="./index.html"><span class="logo-web">Web</span><span class="logo-footer">Studio</span></a></p>
-      <ul class="footer-list list">
-        <li><p class="footer-address"><a class="link" href="https://goo.gl/maps/79tdAXcRNP72xCpw5">г. Киев, пр-т Леси Украинки, 26</a></p></li>
-        <li><p class="footer-contacts mail"><a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a></p></li>
-        <li><p class="footer-contacts"><a class="link" href="tel:+380961111111"> +38 096 111 11 11</a></p></li>
-      </ul>
-    </div>
-
-    <div class="footer-sm">
-      <h3 class="footer-call">Присоединяйтесь</h3>
-      <ul class="footer-sm-place list">
-        <li>
-          <a class="footer-sm-ref" href="/">
-            <div class="footer-sm-icon">
-              <svg>
-                <use href="./images/icons.svg#icon-insta"></use>
-              </svg>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a class="footer-sm-ref" href="/">
-            <div class="footer-sm-icon">
-              <svg>
-                <use href="./images/icons.svg#icon-twitter"></use>
-              </svg>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a class="footer-sm-ref" href="/">
-            <div class="footer-sm-icon">
-              <svg>
-                <use href="./images/icons.svg#icon-fb"></use>
-              </svg>
-            </div>
+  <footer class="footer">
+    <div class="container">
+  
+      <div class="contacts">
+        <p class="logo"><a class="link" href="./index.html"><span class="logo-web">Web</span><span
+              class="logo-footer">Studio</span></a></p>
+        <ul class="footer-list list">
+          <li>
+            <p class="footer-address"><a class="link" href="https://goo.gl/maps/79tdAXcRNP72xCpw5">г. Киев, пр-т Леси
+                Украинки, 26</a></p>
+          </li>
+          <li>
+            <p class="footer-contacts mail"><a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a></p>
+          </li>
+          <li>
+            <p class="footer-contacts"><a class="link" href="tel:+380961111111"> +38 096 111 11 11</a></p>
+          </li>
+        </ul>
+      </div>
+  
+      <div class="footer-sm">
+        <h3 class="footer-call">Присоединяйтесь</h3>
+        <ul class="social-media list">
+          <li>
+            <a class="footer-sm-ref" href="/">
+              <div class="sm-icon">
+                <svg>
+                  <use href="./images/icons.svg#icon-insta"></use>
+                </svg>
+              </div>
             </a>
-        </li>
-        <li>
-          <a class="footer-sm-ref" href="/">
-            <div class="footer-sm-icon">
-              <svg>
-                <use href="./images/icons.svg#icon-linkdin"></use>
-              </svg>
-            </div>
+          </li>
+          <li>
+            <a class="footer-sm-ref" href="/">
+              <div class="sm-icon">
+                <svg>
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </div>
             </a>
-        </li>
-      </ul>
+          </li>
+          <li>
+            <a class="footer-sm-ref" href="/">
+              <div class="sm-icon">
+                <svg>
+                  <use href="./images/icons.svg#icon-fb"></use>
+                </svg>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a class="footer-sm-ref" href="/">
+              <div class="sm-icon">
+                <svg>
+                  <use href="./images/icons.svg#icon-linkdin"></use>
+                </svg>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
 </body>
 </html>

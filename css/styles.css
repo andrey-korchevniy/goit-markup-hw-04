@@ -39,7 +39,6 @@ body {
 
 .container {
   width: 1200px;
-  /* outline: 2px solid tomato; */
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -63,6 +62,32 @@ ul {
   overflow: hidden;
   border: 0;
   clip: rect(0 0 0 0);
+}
+
+.logo {
+  color: black;
+  font-family: var(--ff-accent);
+  font-size: 26px;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-contact:focus,
+.nav-contact:hover,
+.logo-web,
+.active.nav-link {
+  color: var(--accent-color);
+}
+
+.title {
+  color: var(--secondary-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 /* ------------------ PAGE HEADER------------------------------ */
@@ -92,18 +117,9 @@ ul {
   margin-right: 50px;
 }
 
-.nav-logo,
-.footer-logo {
-  color: black;
-  font-family: var(--ff-accent);
-  font-size: 26px;
-  line-height: 1.2;
-  text-decoration: none;
-}
-
 .nav-link,
 .nav-contact {
-  display: inline-flex;
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
   align-items: center;
@@ -120,35 +136,19 @@ ul {
 }
 
 .nav-contact-item:not(:last-child) {
-  display: inline-block;
   margin-right: 50px;
 }
 
-.nav-link:hover,
-.nav-link:focus,
-.nav-contact:focus,
-.nav-contact:hover,
-.logo-web,
-.active {
-  color: var(--accent-color);
-}
-
-.nav-mail {
-  width: 16px;
-  height: 12px;
-  margin-right: 10px;
-  --color: currentColor;
-}
-
-.nav-tel {
-  width: 10px;
-  height: 16px;
+.nav-svg {
   margin-right: 10px;
   --color: currentColor;
 }
 
 /* ------------------ HERO SECTION ------------------------------ */
 .hero {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
   background-color: var(--hero-bgc);
   background-image: linear-gradient(
       to right,
@@ -195,18 +195,6 @@ ul {
   min-width: 200px;
 }
 
-/* Названия секций */
-.features-title,
-.about-title,
-.team-title,
-.clients-title {
-  color: var(--secondary-text-color);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-}
-
 /* ------------------- FEATURES SECTION ---------------*/
 .features-list {
   display: flex;
@@ -234,12 +222,14 @@ ul {
 }
 
 .features-pic-place {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 120px;
-  background-color: var(--bgc-ourteam);
   margin-bottom: 30px;
-  padding: 25px 100px;
   border-radius: 4px;
+  background-color: var(--bgc-ourteam);
 }
 
 .features-pic {
@@ -250,10 +240,6 @@ ul {
 /* ------------------- ABOUT SECTION ---------------------------------*/
 .about {
   padding-top: 0;
-}
-
-.about-title {
-  margin-bottom: 50px;
 }
 
 .about-list {
@@ -271,21 +257,40 @@ ul {
 /* ------------------- TEAM SECTION ---------------*/
 .team {
   background-color: var(--bgc-ourteam);
-  padding-top: 94px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.team-title {
-  margin-bottom: 50px;
+.team-list {
+  display: flex;
+}
+
+.team-card {
+  width: calc((100% - 90px) / 4);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  background-color: var(--bgc-color);
+}
+
+.team-card:not(:last-child) {
+  margin-right: 30px;
+}
+
+.team-img {
+  display: block;
+}
+
+.team-item {
+  padding: 30px 32px 30px 32px;
 }
 
 .team-name {
-  color: var(--secondary-text-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
   margin-bottom: 10px;
+  color: var(--secondary-text-color);
 }
 
 .team-position {
@@ -295,47 +300,12 @@ ul {
   margin-bottom: 16px;
 }
 
-.team-card {
-  width: calc((100% - 90px) / 3);
-  background-color: var(--bgc-color);
-  background: #ffffff;
-
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
-}
-
-.team-card:not(:last-child) {
-  margin-right: 30px;
-}
-
-.team-list {
-  display: flex;
-}
-
-.team-img {
-  display: block;
-}
-
-.team-item {
-  display: block;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  justify-content: center;
-  align-items: center;
-  padding-right: 32px;
-  padding-left: 32px;
-}
-
-.team-sm,
-.footer-sm-place {
+.social-media {
   display: flex;
   justify-content: center;
-  text-align: center;
 }
 
-.team-sm-icon,
-.footer-sm-icon {
+.sm-icon {
   display: flex;
   width: 44px;
   height: 44px;
@@ -344,56 +314,55 @@ ul {
   justify-content: center;
 }
 
-.team-sm-icon:focus,
-.team-sm-icon:hover {
-  background-color: var(--accent-color);
-  --color: #ffffff;
+.sm-icon:focus svg,
+.sm-icon:hover svg {
+  fill: #ffffff;
 }
 
-.team-sm-icon > svg,
-.footer-sm-icon > svg {
+.sm-icon svg {
   width: 20px;
   height: 20px;
-  justify-items: center;
+  fill: #afb1b8;
 }
 
 /* ---------------- CLIENTS --------------------------- */
 
 .clients-list {
   display: flex;
-  /* outline: 1px solid darkorchid; */
   margin-right: -30px;
-  margin-top: 50px;
 }
 
 .clients-list li {
-  display: flex;
   width: calc((100%-150px) / 6);
   height: 92px;
   margin-right: 30px;
 }
 
-.client-link:hover,
-.client-link:focus {
-  border: 1px solid var(--accent-color);
-  --color: var(--accent-color);
-}
-
 .client-link {
   display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   height: 100%;
   border: 1px solid #afb1b8;
   box-sizing: border-box;
   border-radius: 4px;
+  justify-content: center;
+  align-items: center;
 }
 
-.client-logo {
-  /* --color: currentColor; */
+.client-link:hover,
+.client-link:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.client-link:hover svg,
+.client-link:focus svg {
+  fill: var(--accent-color);
+}
+
+.client-link svg {
   width: 106px;
   height: 60px;
+  fill: #afb1b8;
 }
 
 /* ---------------- FOOTER --------------------------- */
@@ -404,7 +373,7 @@ ul {
   padding-bottom: 60px;
 }
 
-.footer > .container {
+.footer .container {
   display: flex;
 }
 
@@ -412,7 +381,7 @@ ul {
   color: #ffffff;
 }
 
-.footer-logo {
+.footer .logo {
   margin-bottom: 20px;
 }
 
@@ -448,17 +417,20 @@ ul {
   margin-bottom: 20px;
 }
 
-.footer-sm-icon {
+.footer-sm .sm-icon {
   background: rgba(255, 255, 255, 0.1);
-  --color: #ffffff;
 }
 
-.footer-sm-place li:not(:last-child) {
+.footer-sm .sm-icon svg {
+  fill: #ffffff;
+}
+
+.social-media li:not(:last-child) {
   margin-right: 10px;
 }
 
-.footer-sm-icon:hover,
-.footer-sm-icon:focus {
+.sm-icon:hover,
+.sm-icon:focus {
   background-color: var(--accent-color);
 }
 
