@@ -257,7 +257,6 @@ ul {
 /* ------------------- TEAM SECTION ---------------*/
 .team {
   background-color: var(--bgc-ourteam);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .team-list {
